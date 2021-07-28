@@ -1,15 +1,15 @@
 package ProxyPattern;
 
 public class ProxyProject implements Project {
-    private String str;
+    private String url;
     private RealProject realProject;
-    public ProxyProject(String str) {
-        this.str = str;
+    public ProxyProject(String url) {
+        this.url = url;
     }
     @Override
     public void run() {
         if (realProject == null) {
-            realProject = new RealProject(str);
+            realProject = new RealProject(url);
         }
         realProject.run();
     }

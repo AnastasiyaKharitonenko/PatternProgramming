@@ -1,18 +1,18 @@
 package ProxyPattern;
 
 public class RealProject  implements Project{
-private String str;
+private String url;
 
-    public RealProject(String str) {
-        this.str = str;
+    public RealProject(String url) {
+        this.url = url;
         load();
     }
     /////метод для указания ссылки проекта
 public void load(){
-    System.out.println("Loading project from" + str +"......");
+    System.out.println("Loading project from" + url +"......");
 }
     @Override
     public void run() {
-        System.out.println("Running project" + str +"......");
+        System.out.println("Running project" + url +"......");
     }
 }
